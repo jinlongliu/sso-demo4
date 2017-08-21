@@ -1,0 +1,8 @@
+server:
+  port: 9001
+  context-path: /resource
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9000/authserver/user
