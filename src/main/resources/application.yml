@@ -6,3 +6,18 @@ security:
   oauth2:
     resource:
       userInfoUri: http://localhost:9000/authserver/user
+#      token-info-uri: http://localhost:9000/authserver/check_token
+#      prefer-token-info: true
+
+#数据库配置信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.18.60.121:3306/liujinlong
+    username: root
+    password: 123qwe!@#QWE
+    initialize: false
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
