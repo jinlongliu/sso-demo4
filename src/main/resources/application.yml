@@ -4,9 +4,13 @@ server:
 
 security:
   oauth2:
+    client:
+          client-id: foo
+          client-secret: foosecret
+          authorized-grant-types: authorization_code,refresh_token,password,implicit
     resource:
-      userInfoUri: http://localhost:9000/authserver/user
-#      token-info-uri: http://localhost:9000/authserver/check_token
+      token-info-uri: http://localhost:9000/authserver/oauth/check_token
+#      user-info-uri: http://localhost:9000/authserver/user
 #      prefer-token-info: true
 
 #数据库配置信息
