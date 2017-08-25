@@ -23,12 +23,14 @@ public class IndexController {
     @Autowired
     private UserMapper userMapper;
 
+    @PreAuthorize("hasRole('USER')")
     @RequestMapping("/tokencall")
     public String secureCall() {
         return "success (id: " + UUID.randomUUID().toString().toUpperCase() + ")";
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping("/data")
     List<User> getData() {
         return userMapper.selectByExample(null);
