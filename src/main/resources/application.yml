@@ -17,7 +17,7 @@ security:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://172.18.60.121:3306/liujinlong
+    url: jdbc:mysql://172.18.60.121:3306/liujinlong?autoReconnect=true&userSSL=false
     username: root
     password: 123qwe!@#QWE
     initialize: false
